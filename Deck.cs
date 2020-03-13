@@ -36,6 +36,7 @@ namespace _205704CardGame2
         public Card dealCard()
         {
             Card c = cards[locationInDeck];
+            cards[locationInDeck].isDealt = true;
             //MessageBox.Show(deck.cards[locationInDeck].ToString());
             locationInDeck++;
             return c;
@@ -55,7 +56,7 @@ namespace _205704CardGame2
         public string outputCards()
         {
             string output = "";
-            foreach(Card card in cards) { output += card.ToString() + '\r'; }
+            foreach(Card card in cards) { output += card.ToString() + '\r' + "isDealt=" + card.isDealt.ToString(); }
             return output;
         }
     }

@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:_205704CardGame2"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="25" Background="Sienna" MouseDown="StackPanel_MouseDown">
+            <Button x:Name="btnHit" Width="100" Click="btnHit_Click">Hit</Button>
+            <Button x:Name="btnStay" Width="100" Click="btnStay_Click">Stay</Button>
+            <Button x:Name="btnConsole" Width="100" Click="btnConsole_Click">Console</Button>
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="10,0,0,0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+        <Canvas Background="DarkSeaGreen" x:Name="canvas" Height="300" MouseDown="canvas_MouseDown"/>
         
-    </Grid>
+        
+        <StackPanel x:Name="spPlayerHand" Background="DarkOliveGreen" Height="110" Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Margin" Value="10,0,0,0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+        <StackPanel x:Name="spDealerHand" Background="DarkOliveGreen" Height="110" Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Margin" Value="10,0,0,0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+    </StackPanel>
 </Window>
